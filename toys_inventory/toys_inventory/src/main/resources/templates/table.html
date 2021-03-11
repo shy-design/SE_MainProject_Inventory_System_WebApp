@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+          crossorigin="anonymous">
+    <title>Toys inventory system</title>
+</head>
+<body>
+<h3> Toy Inventory Processing Table</h3>
+<hr>
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th> Toy ID </th>
+        <th> Brand </th>
+        <th> Name </th>
+        <th> Qty Start </th>
+        <th> Qty sold </th>
+        <th> Qty On Hand </th>
+        <th> Unit Price </th>
+        <th> Total Sales </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="tempToys:${toys}">
+        <td th:text="${tempToys.toyID}"></td>
+        <td th:text="${tempToys.toyBrand}"></td>
+        <td th:text="${tempToys.toyName}"></td>
+        <td th:text="${tempToys.qtyStart}"></td>
+        <td th:text="${tempToys.qtySold}"></td>
+        <td th:text="${tempToys.qtyOnHand}"></td>
+        <td th:text="${tempToys.unitPrice}"></td>
+        <td th:text="${tempToys.totalSales}"></td>
+    </tr>
+    </tbody>
+</table>
+<div class="container">
+    <a th:href="@{/toy}" class="btn btn-secondary">Go back to the main page</a>
+    <!--<button class="btn btn-secondary" type="submit" name="action"  value="go_back">Go back to the main page</button>-->
+</div>
+</body>
+</html>
