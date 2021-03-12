@@ -1,6 +1,7 @@
 package com.example.toys_inventory;
 
-import com.example.toys_inventory.ToyModel.Toy;
+import com.example.toys_inventory.DataModel.Game;
+import com.example.toys_inventory.DataModel.Toy;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,35 +17,35 @@ import java.util.List;
 @RequestMapping({"/","/toy"})
 public class ToyController {
 
-    private List<Toy> toyListGames;
-    private List<Toy> toyListGirls;
-    private List<Toy> toyListBoys;
+    private List<Toy> toyList;
+    private List<Game> gameList;
+
 
     @PostConstruct
     private void loadData() {
-        Toy toy1 = new Toy("nt125s","lego","lego constr",100,50,10);
-        Toy toy2 = new Toy("nt123lm","lego","lego constr",120,35,17);
-        Toy toy3 = new Toy("mwq555g","lego","lego constr",100,25,12);
-        toyListGames = new ArrayList<>();
-        toyListGames.add(toy1);
-        toyListGames.add(toy2);
-        toyListGames.add(toy3);
+        Toy toy1 = new Toy( 1000,"barbie","doll",80,55,18);
+        Toy toy2 = new Toy(1001,"barbie","doll",120,45,22);
+        Toy toy3 = new Toy(1002,"barbie","doll",125,30,13);
+        Toy toy4 = new Toy(1003,"hasbro","transformer",100,50,18);
+        Toy toy5 = new Toy(1004,"hasbro","car",130,45,20);
+        Toy toy6 = new Toy(1005,"hasbro","train",90,40,15);
+        toyList = new ArrayList<>();
 
-        Toy toy4 = new Toy("ntppo86","barbie","doll",80,55,18);
-        Toy toy5 = new Toy("nt1yt56","barbie","doll",120,45,22);
-        Toy toy6 = new Toy("mwq589653vc","barbie","doll",125,30,13);
-        toyListGirls = new ArrayList<>();
-        toyListGirls.add(toy4);
-        toyListGirls.add(toy5);
-        toyListGirls.add(toy6);
+        toyList.add(toy1);
+        toyList.add(toy2);
+        toyList.add(toy3);
+        toyList.add(toy4);
+        toyList.add(toy5);
+        toyList.add(toy6);
 
-        Toy toy7 = new Toy("btr4578vf","hasbro","transformer",100,50,18);
-        Toy toy8 = new Toy("nhyert5","hasbro","car",130,45,20);
-        Toy toy9 = new Toy("mwq5321","hasbro","train",90,40,15);
-        toyListBoys = new ArrayList<>();
-        toyListBoys.add(toy7);
-        toyListBoys.add(toy8);
-        toyListBoys.add(toy9);
+        Game game1= new Game(3000,"lego","lego constr",100,50,10);
+        Game game2 = new Game(3001,"lego","lego constr",120,35,17);
+        Game game3 = new Game(3002,"lego","lego constr",100,25,12);
+        gameList = new ArrayList<>();
+        
+        gameList.add(game1);
+        gameList.add(game2);
+        gameList.add(game3);
 
     }
 @GetMapping
@@ -57,13 +58,10 @@ public class ToyController {
     public String showTables(Model model, @RequestParam("action") String action) {
 
         if(action.equals("send_games")) {
-            model.addAttribute("toys", toyListGames);
+            model.addAttribute("toys", gameList);
         }
-        else if(action.equals("send_girls")) {
-            model.addAttribute("toys", toyListGirls);
-        }
-        else {
-            model.addAttribute("toys", toyListBoys);
+        else if(action.equals("send_toys")) {
+            model.addAttribute("toys", toyList);
         }
 
         return "table";
