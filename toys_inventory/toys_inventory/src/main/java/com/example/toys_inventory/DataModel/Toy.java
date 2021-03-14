@@ -1,9 +1,9 @@
-package com.example.toys_inventory.ToyModel;
+package com.example.toys_inventory.DataModel;
 
 public class Toy {
-    private String toyID;
-    private String toyBrand;
-    private String toyName;
+    private int id;
+    private String brand;
+    private String name;
     private int qtyStart;
     private int qtySold;
     private double unitPrice;
@@ -13,38 +13,37 @@ public class Toy {
 
     }
 
-    public Toy(String toyID, String toyBrand, String toyName, int qtyStart, int qtySold, double unitPrice) {
-        this.toyID = toyID;
-        this.toyBrand = toyBrand;
-        this.toyName = toyName;
+    public Toy(int id, String brand, String name, int qtyStart, int qtySold, double unitPrice) {
+        this.id = id;
+        this.brand = brand;
+        this.name = name;
         this.qtyStart = qtyStart;
         this.qtySold = qtySold;
         this.unitPrice = unitPrice;
-
     }
 
-    public String getToyID() {
-        return toyID;
+    public int getId() {
+        return id;
     }
 
-    public void setToyID(String toyID) {
-        this.toyID = toyID;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getToyBrand() {
-        return toyBrand;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setToyBrand(String toyBrand) {
-        this.toyBrand = toyBrand;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
-    public String getToyName() {
-        return toyName;
+    public String getName() {
+        return name;
     }
 
-    public void setToyName(String toyName) {
-        this.toyName = toyName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getQtyStart() {
@@ -54,6 +53,7 @@ public class Toy {
     public void setQtyStart(int qtyStart) {
         this.qtyStart = qtyStart;
     }
+
     public int getQtySold() {
         return qtySold;
     }
@@ -81,9 +81,9 @@ public class Toy {
     @Override
     public String toString() {
         return "Toy{" +
-                "toyID='" + toyID + '\'' +
-                ", toyBrand='" + toyBrand + '\'' +
-                ", toyName='" + toyName + '\'' +
+                "id='" + id + '\'' +
+                ", brand='" + brand + '\'' +
+                ", name='" + name + '\'' +
                 ", qtyStart=" + qtyStart +
                 ", qtySold=" + qtySold +
                 ", qtyOnHand=" + qtyOnHand() +

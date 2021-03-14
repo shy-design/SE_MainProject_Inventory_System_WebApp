@@ -11,11 +11,12 @@
 </head>
 <body>
 <h3> Toy Inventory Processing Table</h3>
+
 <hr>
 <table class="table table-bordered table-striped">
     <thead>
     <tr>
-        <th> Toy ID </th>
+        <th> Item ID </th>
         <th> Brand </th>
         <th> Name </th>
         <th> Qty Start </th>
@@ -27,9 +28,9 @@
     </thead>
     <tbody>
     <tr th:each="tempToys:${toys}">
-        <td th:text="${tempToys.toyID}"></td>
-        <td th:text="${tempToys.toyBrand}"></td>
-        <td th:text="${tempToys.toyName}"></td>
+        <td th:text="${tempToys.id}"></td>
+        <td th:text="${tempToys.brand}"></td>
+        <td th:text="${tempToys.name}"></td>
         <td th:text="${tempToys.qtyStart}"></td>
         <td th:text="${tempToys.qtySold}"></td>
         <td th:text="${tempToys.qtyOnHand}"></td>
@@ -38,9 +39,17 @@
     </tr>
     </tbody>
 </table>
+
+<div class="container">
+    <button class="btn btn-primary" type="submit" name="action"  value="add_new_item">Add New Item</button>
+    <button class="btn btn-primary" type="submit" name="action"  value="update_item">Update Item</button>
+    <button class="btn btn-primary" type="submit" name="action"  value="delete_item">Delete Item</button>
+</div>
+
 <div class="container">
     <a th:href="@{/toy}" class="btn btn-secondary">Go back to the main page</a>
     <!--<button class="btn btn-secondary" type="submit" name="action"  value="go_back">Go back to the main page</button>-->
 </div>
+
 </body>
 </html>
