@@ -28,3 +28,7 @@ INSERT INTO games(brand, name,qtyStart, qtySold,unitPrice)
 INSERT INTO games(brand, name,qtyStart, qtySold,unitPrice)
 	VALUES(SELECT "lego","lego constructor",100,25,12
 	WHERE NOT EXISTS (SELECT * FROM games));
+
+<!-- insert initial values into the User table -->
+INSERT INTO user(emailId, password)
+	VALUES("abc@gmail.com", "password");
