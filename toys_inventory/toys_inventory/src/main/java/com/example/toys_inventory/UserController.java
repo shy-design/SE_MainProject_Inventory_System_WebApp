@@ -20,7 +20,7 @@ public class UserController {
     @PostMapping
     public String showMainPage(Model model, @RequestParam("email") String email, @RequestParam("password") String password) {
         if (email.equals("abc@gmail.com") && password.equals("password")) {
-            return "main";
+            return "redirect:/toy";
         }
         else{
             return "login";
