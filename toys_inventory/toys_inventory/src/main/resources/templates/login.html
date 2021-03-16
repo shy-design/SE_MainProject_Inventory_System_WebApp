@@ -13,6 +13,9 @@
 <hr>
 <h1> Welcome to the Toy inventory system!</h1>
 <h2> Login</h2>
+<div th:if="${param.error}" class="alert alert-danger">
+    Invalid username and password.
+</div>
 <form method="post">
 
     <input type="email" name="email" placeholder="E-mail" required autofocus/>
