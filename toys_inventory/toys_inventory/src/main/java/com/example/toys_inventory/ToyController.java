@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping({"/","/toy"})
+@RequestMapping({"/toy"})
 public class ToyController {
 
     private List<Toy> toyList;
