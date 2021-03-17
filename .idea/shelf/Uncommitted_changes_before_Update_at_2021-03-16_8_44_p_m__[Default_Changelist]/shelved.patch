@@ -1,0 +1,251 @@
+Index: toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/User.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.toys_inventory.DataModel;\r\n\r\npublic class User {\r\n    private String login;\r\n    private String password;\r\n\r\n    public User(String login, String password) {\r\n        this.login = login;\r\n        this.password = password;\r\n    }\r\n\r\n    public String getLogin() {\r\n        return login;\r\n    }\r\n\r\n    public void setLogin(String login) {\r\n        this.login = login;\r\n    }\r\n\r\n    public String getPassword() {\r\n        return password;\r\n    }\r\n\r\n    public void setPassword(String password) {\r\n        this.password = password;\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"User{\" +\r\n                \"login='\" + login + '\\'' +\r\n                \", password='\" + password + '\\'' +\r\n                '}';\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/User.java b/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/User.java
+--- a/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/User.java	(revision d6c3b579c0af5ab308a2d8619ba847c052e28d81)
++++ b/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/User.java	(date 1615789301845)
+@@ -1,6 +1,12 @@
+ package com.example.toys_inventory.DataModel;
+ 
++import javax.persistence.Entity;
++import javax.persistence.Id;
++
++@Entity
+ public class User {
++
++    @Id
+     private String login;
+     private String password;
+ 
+Index: toys_inventory/toys_inventory/src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+diff --git a/toys_inventory/toys_inventory/src/main/resources/application.properties b/toys_inventory/toys_inventory/src/main/resources/application.properties
+--- a/toys_inventory/toys_inventory/src/main/resources/application.properties	(revision d6c3b579c0af5ab308a2d8619ba847c052e28d81)
++++ b/toys_inventory/toys_inventory/src/main/resources/application.properties	(date 1615790902596)
+@@ -1,1 +1,9 @@
++spring.datasource.url=jbc://localhost:3306/toys_inventory
++spring.datasource.username=root
++spring.datasource.password=csis3300
++spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
++
++spring.jpa.hibernate.ddl-auto=update
++spring.jpa.hibernate-dialect=org.hibernate.dialect.MySQL5Dialect
+ 
++server.port=3306
+\ No newline at end of file
+Index: toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/Game.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.toys_inventory.DataModel;\r\n\r\npublic class Game {\r\n    private int id;\r\n    private String brand;\r\n    private String name;\r\n    private int qtyStart;\r\n    private int qtySold;\r\n    private double unitPrice;\r\n\r\n    public Game() {\r\n\r\n    }\r\n\r\n    public Game(int id, String brand, String name, int qtyStart, int qtySold, double unitPrice) {\r\n        this.id = id;\r\n        this.brand = brand;\r\n        this.name = name;\r\n        this.qtyStart = qtyStart;\r\n        this.qtySold = qtySold;\r\n        this.unitPrice = unitPrice;\r\n    }\r\n\r\n\r\n    public int qtyOnHand() {\r\n        return qtyStart - qtySold;\r\n    }\r\n\r\n    public double totalSales () {\r\n        return qtySold * unitPrice;\r\n    }\r\n\r\n\r\n    public int getId() {\r\n        return id;\r\n    }\r\n\r\n    public void setId(int id) {\r\n        this.id = id;\r\n    }\r\n\r\n    public String getBrand() {\r\n        return brand;\r\n    }\r\n\r\n    public void setBrand(String brand) {\r\n        this.brand = brand;\r\n    }\r\n\r\n    public String getName() {\r\n        return name;\r\n    }\r\n\r\n    public void setName(String name) {\r\n        this.name = name;\r\n    }\r\n\r\n    public int getQtyStart() {\r\n        return qtyStart;\r\n    }\r\n\r\n    public void setQtyStart(int qtyStart) {\r\n        this.qtyStart = qtyStart;\r\n    }\r\n\r\n    public int getQtySold() {\r\n        return qtySold;\r\n    }\r\n\r\n    public void setQtySold(int qtySold) {\r\n        this.qtySold = qtySold;\r\n    }\r\n\r\n    public double getUnitPrice() {\r\n        return unitPrice;\r\n    }\r\n\r\n    public void setUnitPrice(double unitPrice) {\r\n        this.unitPrice = unitPrice;\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"Game{\" +\r\n                \"id='\" + id + '\\'' +\r\n                \", brand='\" + brand + '\\'' +\r\n                \", name='\" + name + '\\'' +\r\n                \", qtyStart=\" + qtyStart +\r\n                \", qtySold=\" + qtySold +\r\n                \", qtyOnHand=\" + qtyOnHand() +\r\n                \", unitPrice=\" + unitPrice +\r\n                \", totalSales=\" + totalSales() +\r\n                '}';\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/Game.java b/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/Game.java
+--- a/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/Game.java	(revision d6c3b579c0af5ab308a2d8619ba847c052e28d81)
++++ b/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/Game.java	(date 1615789301863)
+@@ -1,6 +1,12 @@
+ package com.example.toys_inventory.DataModel;
+ 
++import javax.persistence.Entity;
++import javax.persistence.Id;
++
++@Entity
+ public class Game {
++
++    @Id
+     private int id;
+     private String brand;
+     private String name;
+Index: toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/Toy.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.toys_inventory.DataModel;\r\n\r\npublic class Toy {\r\n    private int id;\r\n    private String brand;\r\n    private String name;\r\n    private int qtyStart;\r\n    private int qtySold;\r\n    private double unitPrice;\r\n\r\n\r\n    public Toy() {\r\n\r\n    }\r\n\r\n    public Toy(int id, String brand, String name, int qtyStart, int qtySold, double unitPrice) {\r\n        this.id = id;\r\n        this.brand = brand;\r\n        this.name = name;\r\n        this.qtyStart = qtyStart;\r\n        this.qtySold = qtySold;\r\n        this.unitPrice = unitPrice;\r\n    }\r\n\r\n    public int getId() {\r\n        return id;\r\n    }\r\n\r\n    public void setId(int id) {\r\n        this.id = id;\r\n    }\r\n\r\n    public String getBrand() {\r\n        return brand;\r\n    }\r\n\r\n    public void setBrand(String brand) {\r\n        this.brand = brand;\r\n    }\r\n\r\n    public String getName() {\r\n        return name;\r\n    }\r\n\r\n    public void setName(String name) {\r\n        this.name = name;\r\n    }\r\n\r\n    public int getQtyStart() {\r\n        return qtyStart;\r\n    }\r\n\r\n    public void setQtyStart(int qtyStart) {\r\n        this.qtyStart = qtyStart;\r\n    }\r\n\r\n    public int getQtySold() {\r\n        return qtySold;\r\n    }\r\n\r\n    public void setQtySold(int qtySold) {\r\n        this.qtySold = qtySold;\r\n    }\r\n\r\n    public double getUnitPrice() {\r\n        return unitPrice;\r\n    }\r\n\r\n    public void setUnitPrice(double unitPrice) {\r\n        this.unitPrice = unitPrice;\r\n    }\r\n\r\n    public int qtyOnHand() {\r\n        return qtyStart - qtySold;\r\n    }\r\n\r\n    public double totalSales () {\r\n        return qtySold * unitPrice;\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"Toy{\" +\r\n                \"id='\" + id + '\\'' +\r\n                \", brand='\" + brand + '\\'' +\r\n                \", name='\" + name + '\\'' +\r\n                \", qtyStart=\" + qtyStart +\r\n                \", qtySold=\" + qtySold +\r\n                \", qtyOnHand=\" + qtyOnHand() +\r\n                \", unitPrice=\" + unitPrice +\r\n                \", totalSales=\" + totalSales() +\r\n                '}';\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/Toy.java b/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/Toy.java
+--- a/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/Toy.java	(revision d6c3b579c0af5ab308a2d8619ba847c052e28d81)
++++ b/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/Toy.java	(date 1615789301880)
+@@ -1,6 +1,12 @@
+ package com.example.toys_inventory.DataModel;
+ 
++import javax.persistence.Entity;
++import javax.persistence.Id;
++
++@Entity
+ public class Toy {
++
++    @Id
+     private int id;
+     private String brand;
+     private String name;
+Index: toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/ToyController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/ToyController.java b/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/Controller/ToyController.java
+rename from toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/ToyController.java
+rename to toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/Controller/ToyController.java
+--- a/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/ToyController.java	(revision d6c3b579c0af5ab308a2d8619ba847c052e28d81)
++++ b/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/Controller/ToyController.java	(date 1615789075424)
+@@ -1,7 +1,9 @@
+-package com.example.toys_inventory;
++package com.example.toys_inventory.Controller;
+ 
+ import com.example.toys_inventory.DataModel.Game;
+ import com.example.toys_inventory.DataModel.Toy;
++import com.example.toys_inventory.Service.ToyService;
++import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.stereotype.Controller;
+ import org.springframework.ui.Model;
+ import org.springframework.web.bind.annotation.GetMapping;
+@@ -17,6 +19,9 @@
+ @RequestMapping({"/","/toy"})
+ public class ToyController {
+ 
++    @Autowired
++    private ToyService toyService;
++
+     private List<Toy> toyList;
+     private List<Game> gameList;
+ 
+Index: toys_inventory/toys_inventory/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n\txsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n\t<modelVersion>4.0.0</modelVersion>\r\n\t<parent>\r\n\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t<artifactId>spring-boot-starter-parent</artifactId>\r\n\t\t<version>2.4.3</version>\r\n\t\t<relativePath/> <!-- lookup parent from repository -->\r\n\t</parent>\r\n\t<groupId>com.example</groupId>\r\n\t<artifactId>toys_inventory</artifactId>\r\n\t<version>0.0.1-SNAPSHOT</version>\r\n\t<name>toys_inventory</name>\r\n\t<description>Toys Inventory System. Group Project</description>\r\n\t<properties>\r\n\t\t<java.version>15</java.version>\r\n\t</properties>\r\n\t<dependencies>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t<artifactId>spring-boot-starter-thymeleaf</artifactId>\r\n\t\t</dependency>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t<artifactId>spring-boot-starter-web</artifactId>\r\n\t\t</dependency>\r\n\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t<artifactId>spring-boot-starter-test</artifactId>\r\n\t\t\t<scope>test</scope>\r\n\t\t</dependency>\r\n\t\t<!--<dependency>\r\n\t\t\t<groupId>mysql</groupId>\r\n\t\t\t<artifactId>mysql-connector-java</artifactId>\r\n\t\t\t<scope>runtime</scope>\r\n\t\t</dependency>-->\r\n\t</dependencies>\r\n\r\n\t<build>\r\n\t\t<plugins>\r\n\t\t\t<plugin>\r\n\t\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t\t<artifactId>spring-boot-maven-plugin</artifactId>\r\n\t\t\t</plugin>\r\n\t\t</plugins>\r\n\t</build>\r\n\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/toys_inventory/toys_inventory/pom.xml b/toys_inventory/toys_inventory/pom.xml
+--- a/toys_inventory/toys_inventory/pom.xml	(revision d6c3b579c0af5ab308a2d8619ba847c052e28d81)
++++ b/toys_inventory/toys_inventory/pom.xml	(date 1615789301890)
+@@ -26,16 +26,23 @@
+ 			<artifactId>spring-boot-starter-web</artifactId>
+ 		</dependency>
+ 
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter-data-jpa</artifactId>
++		</dependency>
++
+ 		<dependency>
+ 			<groupId>org.springframework.boot</groupId>
+ 			<artifactId>spring-boot-starter-test</artifactId>
+ 			<scope>test</scope>
+ 		</dependency>
+-		<!--<dependency>
++
++
++		<dependency>
+ 			<groupId>mysql</groupId>
+ 			<artifactId>mysql-connector-java</artifactId>
+ 			<scope>runtime</scope>
+-		</dependency>-->
++		</dependency>
+ 	</dependencies>
+ 
+ 	<build>
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1615741649233)
++++ b/.idea/modules.xml	(date 1615741649233)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/SE_MainProject_Inventory_System_WebApp.iml" filepath="$PROJECT_DIR$/.idea/SE_MainProject_Inventory_System_WebApp.iml" />
++      <module fileurl="file://$PROJECT_DIR$/toys_inventory/toys_inventory/toys_inventory.iml" filepath="$PROJECT_DIR$/toys_inventory/toys_inventory/toys_inventory.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1615741474843)
++++ b/.idea/vcs.xml	(date 1615741474843)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/SE_MainProject_Inventory_System_WebApp.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/SE_MainProject_Inventory_System_WebApp.iml b/.idea/SE_MainProject_Inventory_System_WebApp.iml
+new file mode 100644
+--- /dev/null	(date 1615741474852)
++++ b/.idea/SE_MainProject_Inventory_System_WebApp.iml	(date 1615741474852)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" name="lib" level="project" />
++    <orderEntry type="library" name="lib1" level="project" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1615741474856)
++++ b/.idea/.gitignore	(date 1615741474856)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/ToysInventoryApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.toys_inventory;\r\n\r\nimport org.springframework.boot.SpringApplication;\r\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\r\n\r\n@SpringBootApplication\r\npublic class ToysInventoryApplication {\r\n\r\n\tpublic static void main(String[] args) {\r\n\t\tSpringApplication.run(ToysInventoryApplication.class, args);\r\n\t}\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/ToysInventoryApplication.java b/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/ToysInventoryApplication.java
+--- a/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/ToysInventoryApplication.java	(revision d6c3b579c0af5ab308a2d8619ba847c052e28d81)
++++ b/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/ToysInventoryApplication.java	(date 1615741474838)
+@@ -6,8 +6,8 @@
+ @SpringBootApplication
+ public class ToysInventoryApplication {
+ 
+-	public static void main(String[] args) {
+-		SpringApplication.run(ToysInventoryApplication.class, args);
+-	}
++    public static void main(String[] args) {
++        SpringApplication.run(ToysInventoryApplication.class, args);
++    }
+ 
+ }
