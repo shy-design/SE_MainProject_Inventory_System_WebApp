@@ -24,3 +24,8 @@ CREATE TABLE IF NOT EXISTS games (
     unitPrice DOUBLE NOT NULL,
     totalSales DOUBLE as (qtySold * unitPrice) NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS user (
+    emailId VARCHAR(255) PRIMARY KEY,
+    password VARCHAR(255) NOT NULL
+    );
