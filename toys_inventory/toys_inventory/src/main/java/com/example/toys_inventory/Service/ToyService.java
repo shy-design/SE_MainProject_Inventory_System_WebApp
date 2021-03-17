@@ -12,7 +12,7 @@ public class ToyService {
     @Autowired
     private ToyRepository toyRepo;
 
-    public List<Toy> listAll(){ return toyRepo.findAll(); }
+   public List<Toy> listAll(){ return (List<Toy>) toyRepo.findAll(); }
 
     public void save(Toy toy){ toyRepo.save(toy); }
 
