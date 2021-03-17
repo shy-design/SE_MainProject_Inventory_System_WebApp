@@ -23,7 +23,7 @@ public class UserController {
             return "redirect:/toy";
         }
         else{
-            return "login";
+            return "redirect:login?error";
         }
     }
 }
