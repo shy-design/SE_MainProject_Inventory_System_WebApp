@@ -4,10 +4,7 @@ import com.example.toys_inventory.DataModel.Game;
 import com.example.toys_inventory.DataModel.Toy;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
@@ -59,11 +56,115 @@ public class ToyController {
 
         if(action.equals("send_games")) {
             model.addAttribute("toys", gameList);
+            model.addAttribute("category","game");
         }
         else if(action.equals("send_toys")) {
             model.addAttribute("toys", toyList);
+            model.addAttribute("category","toy");
         }
 
         return "table";
+    }
+
+    @RequestMapping(value="/add", method= RequestMethod.POST)
+    public String addItems(Model model,
+                           @RequestParam("action") String action,
+                           @RequestParam("category") String category,
+                           @ModelAttribute("toy") Toy toy){
+
+        model.addAttribute("category", category);
+
+        // processing Add Item button
+        if (action.equals("add") && category.equals("game")){
+            Game game = new Game(toy.getId(), toy.getBrand(), toy.getName(), toy.getQtyStart(), toy.getQtySold(),
+                    toy.getUnitPrice());
+            gameList.add(game);
+            model.addAttribute("toys", gameList);
+            return "table";
+        } else if (action.equals("add") && category.equals("toy")){
+            toyList.add(toy);
+            model.addAttribute("toys", toyList);
+            return "table";
+        } else return "add";
+    }
+
+    @RequestMapping(value="/update", method=RequestMethod.POST)
+    public String updateItems(Model model,
+                              @RequestParam("action") String action,
+                              @RequestParam("category") String category,
+                              @RequestParam("id") int id,
+                              @ModelAttribute Toy toy){
+
+        boolean validID = false;
+        model.addAttribute("category", category);
+
+        // processing Update Item button
+        if (action.equals("update") && category.equals("game")){
+            Game game1 = new Game(toy.getId(), toy.getBrand(), toy.getName(), toy.getQtyStart(), toy.getQtySold(), toy.getUnitPrice());
+            for (Game game: gameList) {
+                if (game.getId() == id){
+                    gameList.set(gameList.indexOf(game),game1);
+                }
+            }
+            model.addAttribute("toys", gameList);
+            return "table";
+        } else if (action.equals("update") && category.equals("toy")){
+            for (Toy toy1: toyList) {
+                if (toy1.getId() == id){
+                    toyList.set(toyList.indexOf(toy1),toy);
+                }
+            }
+            model.addAttribute("toys", toyList);
+            return "table";
+        }
+
+        if (action.equals("delete_item")){
+            if (category.equals("game")){
+                if (!gameList.removeIf(n -> (n.getId() == id))){
+                    model.addAttribute("error_delete", "No item has ID: " + id + ". Please try again.");
+                }
+                model.addAttribute("toys", gameList);
+            } else if (category.equals("toy")){
+                if (!toyList.removeIf(n -> (n.getId() == id))){
+                    model.addAttribute("error_delete", "No item has ID: " + id + ". Please try again.");
+                }
+                model.addAttribute("toys", toyList);
+            }
+
+            return "table";
+        }
+
+        if (action.equals("update_item")){
+            validID = false;
+            if (category.equals("game")){
+                for (Game game: gameList) {
+                    if (game.getId() == id){
+                        model.addAttribute("toy", game);
+                        validID = true;
+                    }
+                }
+            } else if (category.equals("toy")){
+                for (Toy toy_updated: toyList) {
+                    if (toy_updated.getId() == id){
+                        model.addAttribute("toy", toy_updated);
+                        validID = true;
+                    }
+                }
+            }
+
+            if (validID){
+                return "update";
+            } else {
+                model.addAttribute("error_update", "No item has ID: " + id + ". Please try again.");
+                if (category.equals("toy")){
+                    model.addAttribute("toys", toyList);
+                } else if (category.equals("game")){
+                    model.addAttribute("toys", gameList);
+                }
+                return "table";
+            }
+        } else {
+            return "table";
+        }
     }
 }
