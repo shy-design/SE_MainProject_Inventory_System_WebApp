@@ -1,34 +1,18 @@
-<!-- insert initial values into the toys table -->
-INSERT INTO toys(brand, name,qtyStart, qtySold,unitPrice)
-	VALUES(SELECT "barbie","doll",80,55,18
-	WHERE NOT EXISTS (SELECT * FROM toys));
-INSERT INTO toys(brand, name,qtyStart, qtySold,unitPrice)
-    VALUES(SELECT "barbie","doll",120,45,22
-    WHERE NOT EXISTS (SELECT * FROM toys));
-INSERT INTO toys(brand, name,qtyStart, qtySold,unitPrice)
-   	VALUES(SELECT "barbie","doll",125,30,13
-   	WHERE NOT EXISTS (SELECT * FROM toys));
-INSERT INTO toys(brand, name,qtyStart, qtySold,unitPrice)
-	VALUES(SELECT "hasbro","transformer",100,50,18
-	WHERE NOT EXISTS (SELECT * FROM toys));
-INSERT INTO toys(brand, name,qtyStart, qtySold,unitPrice)
-	VALUES(SELECT "hasbro","car",130,45,20
-	WHERE NOT EXISTS (SELECT * FROM toys));
-INSERT INTO toys(brand, name,qtyStart, qtySold,unitPrice)
-	VALUES(SELECT "hasbro","train",90,40,15
-	WHERE NOT EXISTS (SELECT * FROM toys));
+INSERT INTO TOYS(BRAND, NAME, QTYSTART, QTYSOLD, UNITPRICE)
+	VALUES('Barbie','doll',80,55,18);
+INSERT INTO TOYS(BRAND, NAME, QTYSTART, QTYSOLD, UNITPRICE)
+	VALUES('Lego','Jurassic World',110,95,60);
+INSERT INTO TOYS(BRAND, NAME, QTYSTART, QTYSOLD, UNITPRICE)
+    VALUES('Lego','Star Wars',150,55,28);
+INSERT INTO TOYS(BRAND, NAME, QTYSTART, QTYSOLD, UNITPRICE)
+    VALUES('Hot Wheels','Monster Truck',80,55,18);
+INSERT INTO TOYS(BRAND, NAME, QTYSTART, QTYSOLD, UNITPRICE)
+    VALUES('Barbie','Barbie Dreamhouse',80,25,88);
 
-<!-- insert initial values into the games table -->
-INSERT INTO games(brand, name,qtyStart, qtySold,unitPrice)
-	VALUES(SELECT "lego","lego constructor",100,50,10
-	WHERE NOT EXISTS (SELECT * FROM games));
-INSERT INTO games(brand, name,qtyStart, qtySold,unitPrice)
-	VALUES(SELECT "lego","lego constructor",120,35,17
-	WHERE NOT EXISTS (SELECT * FROM games));
-INSERT INTO games(brand, name,qtyStart, qtySold,unitPrice)
-	VALUES(SELECT "lego","lego constructor",100,25,12
-	WHERE NOT EXISTS (SELECT * FROM games));
 
-<!-- insert initial values into the User table -->
-INSERT INTO user(emailId, password)
-	VALUES("abc@gmail.com", "password");
+INSERT INTO GAMES(BRAND, NAME, QTYSTART, QTYSOLD, UNITPRICE)
+	VALUES('Warhammer','Tempest of Souls',100,50,100);
+INSERT INTO GAMES(BRAND, NAME, QTYSTART, QTYSOLD, UNITPRICE)
+	VALUES('Starling Games','A War of Whisperer',120,35,59);
+INSERT INTO GAMES(BRAND, NAME, QTYSTART, QTYSOLD, UNITPRICE)
+    VALUES('Cephalofair Games','Gloomhaven Jaws of the Lion',120,35,62);
