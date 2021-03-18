@@ -1,5 +1,5 @@
 INSERT INTO TOYS(BRAND, NAME, QTYSTART, QTYSOLD, UNITPRICE)
-	VALUES('barbie','doll',80,55,18);
+	VALUES('Barbie','doll',80,55,18);
 INSERT INTO TOYS(BRAND, NAME, QTYSTART, QTYSOLD, UNITPRICE)
 	VALUES('Lego','Jurassic World',110,95,60);
 INSERT INTO TOYS(BRAND, NAME, QTYSTART, QTYSOLD, UNITPRICE)
@@ -16,3 +16,12 @@ INSERT INTO GAMES(BRAND, NAME, QTYSTART, QTYSOLD, UNITPRICE)
 	VALUES('Starling Games','A War of Whisperer',120,35,59);
 INSERT INTO GAMES(BRAND, NAME, QTYSTART, QTYSOLD, UNITPRICE)
     VALUES('Cephalofair Games','Gloomhaven Jaws of the Lion',120,35,62);
+
+
+/*INSERT INTO users(emailId, password)
+	VALUES("abc@gmail.com", "password");
+	VALUES("kate@gmail.com", "password1");
+	VALUES("andy@gmail.com", "password2");
+	VALUES("danilo@gmail.com", "password3");
+	VALUES("aakash@gmail.com", "password4");
+	VALUES("reza@gmail.com", "password5");*/
