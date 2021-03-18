@@ -1,6 +1,13 @@
 package com.example.toys_inventory.DataModel;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class User {
+
+    @Id
+    private int userId;
     private String login;
     private String password;
 

@@ -1,6 +1,13 @@
 package com.example.toys_inventory.DataModel;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "GAMES")
 public class Game {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String brand;
     private String name;
