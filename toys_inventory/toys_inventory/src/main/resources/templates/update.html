@@ -14,9 +14,16 @@
     <form method="post" th:object="${toy}">
         <h2>Enter the information of the added item</h2>
         <table>
+<<<<<<< Updated upstream
             <tr hidden>
                 <td><label>Item ID (*) </label></td>
                 <td><input type="number" th:field="*{id}" th:value="${toy.id}"/> <br /></td>
+=======
+            <tr>
+                <td><p>Item ID (*)</p></td>
+                <td><p th:text="${toy.id}" th:field="*{id}"></p></td>
+                <td hidden><input type="text" th:field="*{id}" th:value="${toy.id}"/> <br /></td>
+>>>>>>> Stashed changes
             </tr>
             <tr>
                 <td><label>Brand (*)</label></td>

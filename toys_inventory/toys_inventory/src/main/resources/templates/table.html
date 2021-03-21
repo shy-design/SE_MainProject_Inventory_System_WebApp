@@ -57,7 +57,11 @@
                 <form method="post" action="/toy/update">
                     <input type="text" th:name="category" th:value="${category}" hidden/>
                     <label>Enter the ID of the updated item: </label></br>
+<<<<<<< Updated upstream
                     <input type="text" th:name="id" required>
+=======
+                    <input type="number" th:name="id" required>
+>>>>>>> Stashed changes
                     <button class="btn btn-primary" type="submit" name="action"  value="update_item">Update Item</button>
                     <p th:text="${error_update}" style="color:red;"></p>
                 </form>
@@ -67,7 +71,11 @@
                 <form method="post" action="/toy/update">
                     <input type="text" th:name="category" th:value="${category}" hidden/>
                     <label>Enter the ID of the deleted item: </label></br>
+<<<<<<< Updated upstream
                     <input type="text" th:name="id" required>
+=======
+                    <input type="number" th:name="id" required>
+>>>>>>> Stashed changes
                     <button class="btn btn-primary" type="submit" name="action"  value="delete_item">Delete Item</button>
                     <p th:text="${error_delete}" style="color:red;"></p>
                 </form>
