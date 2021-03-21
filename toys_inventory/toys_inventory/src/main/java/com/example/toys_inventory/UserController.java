@@ -47,7 +47,7 @@ public class UserController {
     @PostMapping
     public String showMainPage(Model model, @RequestParam("email") String email, @RequestParam("password") String password) {
         String value = "";
-        for(int i=0;i<userList.size()-1;i++){
+        for(int i=0;i<userList.size();i++){
             if (email.equals(userList.get(i).getLogin()) && password.equals(userList.get(i).getPassword())) {
                 value = "redirect:/toy";
                 break;

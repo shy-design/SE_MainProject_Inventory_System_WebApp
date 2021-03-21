@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d92c320-b0bb-41de-9052-c751e4d62c55" name="Default Changelist" comment="my changes">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/Service/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/Service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SE_MainProject_Inventory_System_WebApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SE_MainProject_Inventory_System_WebApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/db/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/db/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/db/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/db/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,17 +80,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ToysInventoryApplication" />
@@ -113,7 +94,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615425822040</updated>
-      <workItem from="1616307274699" duration="499000" />
+      <workItem from="1616307274699" duration="635000" />
+      <workItem from="1616309960303" duration="66000" />
     </task>
     <task id="LOCAL-00001" summary="my changes">
       <created>1615952763559</created>
