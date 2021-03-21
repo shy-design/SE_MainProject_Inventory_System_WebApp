@@ -17,11 +17,15 @@ INSERT INTO GAMES(BRAND, NAME, QTYSTART, QTYSOLD, UNITPRICE)
 INSERT INTO GAMES(BRAND, NAME, QTYSTART, QTYSOLD, UNITPRICE)
     VALUES('Cephalofair Games','Gloomhaven Jaws of the Lion',120,35,62);
 
-
-/*INSERT INTO users(emailId, password)
-	VALUES("abc@gmail.com", "password");
-	VALUES("kate@gmail.com", "password1");
-	VALUES("andy@gmail.com", "password2");
-	VALUES("danilo@gmail.com", "password3");
-	VALUES("aakash@gmail.com", "password4");
-	VALUES("reza@gmail.com", "password5");*/
+INSERT INTO USERS(LOGIN, PASSWORD)
+VALUES('abc@gmail.com', 'password');
+INSERT INTO USERS(LOGIN, PASSWORD)
+VALUES('kate@gmail.com', 'password1');
+INSERT INTO USERS(LOGIN, PASSWORD)
+VALUES('andy@gmail.com', 'password2');
+INSERT INTO USERS(LOGIN, PASSWORD)
+VALUES('danilo@gmail.com', 'password3');
+INSERT INTO USERS(LOGIN, PASSWORD)
+VALUES('aakash@gmail.com', 'password4');
+INSERT INTO USERS(LOGIN, PASSWORD)
+VALUES('reza@gmail.com', 'password5');
