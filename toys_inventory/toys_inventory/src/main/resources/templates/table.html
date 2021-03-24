@@ -13,37 +13,71 @@
 <h3> Toy Inventory Processing Table</h3>
 
 <hr>
-<table class="table table-bordered table-striped">
-    <thead>
-    <tr>
-        <th> Item ID </th>
-        <th> Brand </th>
-        <th> Name </th>
-        <th> Qty Start </th>
-        <th> Qty sold </th>
-        <th> Qty On Hand </th>
-        <th> Unit Price </th>
-        <th> Total Sales </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="tempToys:${toys}">
-        <td th:text="${tempToys.id}"></td>
-        <td th:text="${tempToys.brand}"></td>
-        <td th:text="${tempToys.name}"></td>
-        <td th:text="${tempToys.qtyStart}"></td>
-        <td th:text="${tempToys.qtySold}"></td>
-        <td th:text="${tempToys.qtyOnHand}"></td>
-        <td th:text="${tempToys.unitPrice}"></td>
-        <td th:text="${tempToys.totalSales}"></td>
-    </tr>
-    </tbody>
-</table>
+<div class="container">
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th> Item ID </th>
+            <th> Brand </th>
+            <th> Name </th>
+            <th> Qty Start </th>
+            <th> Qty sold </th>
+            <th> Qty On Hand </th>
+            <th> Unit Price </th>
+            <th> Total Sales </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="tempToys:${toys}">
+            <td th:text="${tempToys.id}"></td>
+            <td th:text="${tempToys.brand}"></td>
+            <td th:text="${tempToys.name}"></td>
+            <td th:text="${tempToys.qtyStart}"></td>
+            <td th:text="${tempToys.qtySold}"></td>
+            <td th:text="${tempToys.qtyOnHand}"></td>
+            <td th:text="${tempToys.unitPrice}"></td>
+            <td th:text="${tempToys.totalSales}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 <div class="container">
-    <button class="btn btn-primary" type="submit" name="action"  value="add_new_item">Add New Item</button>
-    <button class="btn btn-primary" type="submit" name="action"  value="update_item">Update Item</button>
-    <button class="btn btn-primary" type="submit" name="action"  value="delete_item">Delete Item</button>
+    <table class="table">
+        <tr>
+            <td>
+                <h4>Add new item?</h4>
+                <form method="post" action="/toy/add">
+                    <input type="text" th:name="category" th:value="${category}" hidden/>
+                    <button class="btn btn-primary" type="submit" name="action"  value="add_new_item">Click here</button>
+                </form>
+            </td>
+            <td>
+                <h4>Update the existing item</h4>
+                <form method="post" action="/toy/update">
+                    <input type="text" th:name="category" th:value="${category}" hidden/>
+                    <label>Enter the ID of the updated item: </label></br>
+                    <input type="number" th:name="id" required>
+                    <button class="btn btn-primary" type="submit" name="action"  value="update_item">Update Item</button>
+                    <p th:text="${error_update}" style="color:red;"></p>
+                </form>
+            </td>
+            <td>
+                <h4>Delete the existing item</h4>
+                <form method="post" action="/toy/update">
+                    <input type="text" th:name="category" th:value="${category}" hidden/>
+                    <label>Enter the ID of the deleted item: </label></br>
+                    <input type="number" th:name="id" required>
+                    <button class="btn btn-primary" type="submit" name="action"  value="delete_item">Delete Item</button>
+                    <p th:text="${error_delete}" style="color:red;"></p>
+                </form>
+            </td>
+            <td>
+                <h4>Export a report</h4>
+                <button class="btn btn-primary" type="submit" name="action"  value="generate_report">Generate Report</button>
+            </td>
+        </tr>
+    </table>
 </div>
 
 <div class="container">

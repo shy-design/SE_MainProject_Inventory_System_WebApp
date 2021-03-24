@@ -2,18 +2,23 @@ package com.example.toys_inventory.DataModel;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="USERS")
 public class User {
 
     @Id
-    private int userId;
     private String login;
     private String password;
 
     public User(String login, String password) {
         this.login = login;
         this.password = password;
+    }
+
+    public User() {
+
     }
 
     public String getLogin() {

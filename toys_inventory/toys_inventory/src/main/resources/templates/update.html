@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+          crossorigin="anonymous">
+    <title>Toys inventory system</title>
+</head>
+<body>
+<div class="container" align="center">
+    <form method="post" th:object="${toy}">
+        <h2>Enter the information of the added item</h2>
+        <table>
+            <tr>
+                <td><p>Item ID (*)</p></td>
+                <td><p th:text="${toy.id}" th:field="*{id}"></p></td>
+                <td hidden><input type="text" th:field="*{id}" th:value="${toy.id}"/> <br /></td>
+            </tr>
+            <tr>
+                <td><label>Brand (*)</label></td>
+                <td><input type="text" th:field="*{brand}" th:value="${toy.brand}" required/> <br /></td>
+            </tr>
+            <tr>
+                <td><label>Name (*)</label></td>
+                <td> <input type="text" th:field="*{name}" th:value="${toy.name}" required/> <br /></td>
+            </tr>
+            <tr>
+                <td><label>Qty Start (*)</label></td>
+                <td><input type="number" th:field="*{qtyStart}" th:value="${toy.qtyStart}" required/><br /></td>
+            </tr>
+            <tr>
+                <td><label>Qty sold (*)</label></td>
+                <td><input type="number" th:field="*{qtySold}" th:value="${toy.qtySold}" required/> <br /></td>
+            </tr>
+            <tr>
+                <td><label>Unit Price (*)</label></td>
+                <td><input type="number" th:field="*{unitPrice}" th:value="${toy.unitPrice}" required/><br /></td>
+            </tr>
+            <tr hidden>
+                <td><label>Category</label></td>
+                <td><input type="text" th:value="${category}" th:name="category"></td>
+            </tr>
+        </table>
+        <br />
+        <label>(*): required fields</label>
+        <br /><br/>
+        <button class="btn btn-primary" type="submit" name="action" value="update">Update Item</button>
+    </form>
+</div>
+</body>
+</html>
