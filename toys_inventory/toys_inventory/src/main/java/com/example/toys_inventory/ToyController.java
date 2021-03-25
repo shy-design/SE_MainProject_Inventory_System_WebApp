@@ -44,15 +44,15 @@ public class ToyController {
         toyList = new ArrayList<>();
         toyList = jdbcTemplate.query(sqlToys, new BeanPropertyRowMapper<>(Toy.class));
         if(toyList.size() == 0) {
-            String insertToys = "INSERT INTO toys(brand, name, QTY_START, QTY_SOLD, UNIT_PRICE)" +
+            String insertToys = "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)" +
                     "VALUES('Barbie','doll',80,55,18);" +
-                    "INSERT INTO TOYS(BRAND, NAME, QTY_START, QTY_SOLD, UNIT_PRICE)" +
+                    "INSERT INTO TOYS(brand, name, qtyStart, qtySold, unitPrice)" +
                     "\tVALUES('Lego','Jurassic World',110,95,60);" +
-                    "INSERT INTO TOYS(BRAND, NAME, QTY_START, QTY_SOLD, UNIT_PRICE)\n" +
+                    "INSERT INTO TOYS(brand, name, qtyStart, qtySold, unitPrice)\n" +
                     "    VALUES('Lego','Star Wars',150,55,28);" +
-                    "INSERT INTO TOYS(BRAND, NAME, QTY_START, QTY_SOLD, UNIT_PRICE)\n" +
+                    "INSERT INTO TOYS(brand, name, qtyStart, qtySold, unitPrice)\n" +
                     "    VALUES('Hot Wheels','Monster Truck',80,55,18);" +
-                    "INSERT INTO TOYS(BRAND, NAME, QTY_START, QTY_SOLD, UNIT_PRICE)" +
+                    "INSERT INTO TOYS(brand, name, qtyStart, qtySold, unitPrice)" +
                     "    VALUES('Barbie','Barbie Dreamhouse',80,25,88);";
             jdbcTemplate.execute(insertToys);
         }
@@ -65,11 +65,11 @@ public class ToyController {
 
         if(gameList.size() == 0){
 
-            String insertGames = "INSERT INTO GAMES(BRAND, NAME, QTY_START, QTY_SOLD, UNIT_PRICE)" +
+            String insertGames = "INSERT INTO GAMES(brand, name, qtyStart, qtySold, unitPrice" +
             "VALUES('Warhammer','Tempest of Souls',100,50,100);" +
-            "INSERT INTO GAMES(BRAND, NAME, QTY_START, QTY_SOLD, UNIT_PRICE)" +
+            "INSERT INTO GAMES(brand, name, qtyStart, qtySold, unitPrice)" +
             "VALUES('Starling Games','A War of Whisperer',120,35,59);" +
-            "INSERT INTO GAMES(BRAND, NAME, QTY_START, QTY_SOLD, UNIT_PRICE)" +
+            "INSERT INTO GAMES(brand, name, qtyStart, qtySold, unitPrice)" +
             "VALUES('Cephalofair Games','Gloomhaven Jaws of the Lion',120,35,62);";
             jdbcTemplate.execute(insertGames);
         }
@@ -81,17 +81,17 @@ public class ToyController {
         userList = jdbcTemplate.query(sqlUsers, new BeanPropertyRowMapper<>(User.class));
 
         if(userList.size() == 0){
-            String insertUsers = "INSERT INTO USERS(LOGIN, PASSWORD)" +
+            String insertUsers = "INSERT INTO USERS(login, password)" +
                     "VALUES('abc@gmail.com', 'password');" +
-                    "INSERT INTO USERS(LOGIN, PASSWORD)" +
+                    "INSERT INTO USERS(login, password)" +
                     "VALUES('kate@gmail.com', 'password1');" +
-                    "INSERT INTO USERS(LOGIN, PASSWORD)" +
+                    "INSERT INTO USERS(login, password)" +
                     "VALUES('andy@gmail.com', 'password2');" +
-                    "INSERT INTO USERS(LOGIN, PASSWORD)\n" +
+                    "INSERT INTO USERS(login, password)\n" +
                     "VALUES('danilo@gmail.com', 'password3');" +
-                    "INSERT INTO USERS(LOGIN, PASSWORD)" +
+                    "INSERT INTO USERS(login, password)" +
                     "VALUES('aakash@gmail.com', 'password4');" +
-                    "INSERT INTO USERS(LOGIN, PASSWORD)" +
+                    "INSERT INTO USERS(login, password)" +
                     "VALUES('reza@gmail.com', 'password5');";
             jdbcTemplate.execute(insertUsers);
         }
