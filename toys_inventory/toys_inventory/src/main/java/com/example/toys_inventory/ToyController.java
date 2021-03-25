@@ -141,14 +141,14 @@ public class ToyController {
 
         // processing Add Item button
         if (action.equals("add") && category.equals("game")){
-            jdbcTemplate.update("INSERT INTO GAMES(BRAND, NAME, QTY_START, QTY_SOLD, UNIT_PRICE) VALUES(?,?,?,?,?);",
+            jdbcTemplate.update("INSERT INTO GAMES(brand, name, qtyStart, qtySold, unitPrice) VALUES(?,?,?,?,?);",
                     toy.getBrand(), toy.getName(), toy.getQtyStart(), toy.getQtySold(), toy.getUnitPrice());
             loadData();
             model.addAttribute("toys", gameList);
             return "table";
 
         } else if (action.equals("add") && category.equals("toy")){
-            jdbcTemplate.update("INSERT INTO TOYS(BRAND, NAME, QTY_START, QTY_SOLD, UNIT_PRICE) VALUES(?,?,?,?,?);",
+            jdbcTemplate.update("INSERT INTO TOYS(brand, name, qtyStart, qtySold, unitPrice) VALUES(?,?,?,?,?);",
                     toy.getBrand(), toy.getName(), toy.getQtyStart(), toy.getQtySold(), toy.getUnitPrice());
             loadData();
             model.addAttribute("toys", toyList);
