@@ -12,5 +12,5 @@ public class GameService {
     @Autowired
     private GameRepository gameRepository;
 
-   // public List<Game> listGames(){ return gameRepository.findAll(); }
+    public List<Game> listGames(){ return (List<Game>) gameRepository.findAll(); }
 }
