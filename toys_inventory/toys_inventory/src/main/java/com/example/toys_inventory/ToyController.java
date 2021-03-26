@@ -5,20 +5,21 @@ import com.example.toys_inventory.DataModel.Toy;
 import com.example.toys_inventory.DataModel.User;
 import com.example.toys_inventory.Service.GameService;
 import com.example.toys_inventory.Service.ToyService;
+import com.lowagie.text.DocumentException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -35,6 +36,8 @@ public class ToyController {
     private List<Toy> toyList;
     private List<Game> gameList;
     private List<User> userList;
+
+    private String toyOrGame = "";
 
     // Method to populate the tables only once.
     @PostConstruct
@@ -122,10 +125,12 @@ public class ToyController {
         if(action.equals("send_games")) {
             model.addAttribute("toys", gameList);
             model.addAttribute("category","game");
+            toyOrGame = "games";
         }
         else if(action.equals("send_toys")) {
             model.addAttribute("toys", toyList);
             model.addAttribute("category","toy");
+            toyOrGame = "toys";
         }
 
         return "table";
@@ -243,5 +248,37 @@ public class ToyController {
         } else {
             return "table";
         }
+    }
+
+    @RequestMapping(value="/generate", method= RequestMethod.GET)
+    public void exportToPDF(HttpServletResponse response) throws DocumentException, IOException {
+        response.setContentType("application/pdf");
+        DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+        String currentDateTime = dateFormatter.format(new Date());
+
+        //To download it, and not first display the report
+        //String headerKey = "Content-Disposition";
+        String headerKey = " ";
+        String headerValue = "attachment; filename=toys_" + currentDateTime + ".pdf";
+        response.setHeader(headerKey, headerValue);
+
+        //List<Toy> toyList = toyService.listAll();
+        String sqlToys= "SELECT * FROM toys";
+        toyList = new ArrayList<>();
+        toyList = jdbcTemplate.query(sqlToys, new BeanPropertyRowMapper<>(Toy.class));
+
+        String sqlGames = "SELECT * FROM games";
+        gameList = new ArrayList<>();
+        gameList = jdbcTemplate.query(sqlGames, new BeanPropertyRowMapper<>(Game.class));
+
+        if(toyOrGame.equals("toys")){
+            PdfExporterToy exporter = new PdfExporterToy(toyList);
+            exporter.export(response);
+        }
+        else if(toyOrGame.equals("games")){
+            PdfExporterGame exporter = new PdfExporterGame(gameList);
+            exporter.export(response);
+        }
+
     }
 }
