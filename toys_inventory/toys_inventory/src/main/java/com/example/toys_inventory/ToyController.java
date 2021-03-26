@@ -49,13 +49,13 @@ public class ToyController {
         if(toyList.size() == 0) {
             String insertToys = "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)" +
                     "VALUES('Barbie','doll',80,55,18);" +
-                    "INSERT INTO TOYS(brand, name, qtyStart, qtySold, unitPrice)" +
+                    "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)" +
                     "\tVALUES('Lego','Jurassic World',110,95,60);" +
-                    "INSERT INTO TOYS(brand, name, qtyStart, qtySold, unitPrice)\n" +
+                    "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)\n" +
                     "    VALUES('Lego','Star Wars',150,55,28);" +
-                    "INSERT INTO TOYS(brand, name, qtyStart, qtySold, unitPrice)\n" +
+                    "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)\n" +
                     "    VALUES('Hot Wheels','Monster Truck',80,55,18);" +
-                    "INSERT INTO TOYS(brand, name, qtyStart, qtySold, unitPrice)" +
+                    "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)" +
                     "    VALUES('Barbie','Barbie Dreamhouse',80,25,88);";
             jdbcTemplate.execute(insertToys);
         }
@@ -70,9 +70,9 @@ public class ToyController {
 
             String insertGames = "INSERT INTO games(brand, name, qtyStart, qtySold, unitPrice)" +
             "VALUES('Warhammer','Tempest of Souls',100,50,100);" +
-            "INSERT INTO GAMES(brand, name, qtyStart, qtySold, unitPrice)" +
+            "INSERT INTO games(brand, name, qtyStart, qtySold, unitPrice)" +
             "VALUES('Starling Games','A War of Whisperer',120,35,59);" +
-            "INSERT INTO GAMES(brand, name, qtyStart, qtySold, unitPrice)" +
+            "INSERT INTO games(brand, name, qtyStart, qtySold, unitPrice)" +
             "VALUES('Cephalofair Games','Gloomhaven Jaws of the Lion',120,35,62);";
             jdbcTemplate.execute(insertGames);
         }
@@ -86,15 +86,15 @@ public class ToyController {
         if(userList.size() == 0){
             String insertUsers = "INSERT INTO users(login, password)" +
                     "VALUES('abc@gmail.com', 'password');" +
-                    "INSERT INTO USERS(login, password)" +
+                    "INSERT INTO users(login, password)" +
                     "VALUES('kate@gmail.com', 'password1');" +
-                    "INSERT INTO USERS(login, password)" +
+                    "INSERT INTO users(login, password)" +
                     "VALUES('andy@gmail.com', 'password2');" +
-                    "INSERT INTO USERS(login, password)\n" +
+                    "INSERT INTO users(login, password)\n" +
                     "VALUES('danilo@gmail.com', 'password3');" +
-                    "INSERT INTO USERS(login, password)" +
+                    "INSERT INTO users(login, password)" +
                     "VALUES('aakash@gmail.com', 'password4');" +
-                    "INSERT INTO USERS(login, password)" +
+                    "INSERT INTO users(login, password)" +
                     "VALUES('reza@gmail.com', 'password5');";
             jdbcTemplate.execute(insertUsers);
         }

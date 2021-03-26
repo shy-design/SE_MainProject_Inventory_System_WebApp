@@ -3,7 +3,7 @@ package com.example.toys_inventory.DataModel;
 import javax.persistence.*;
 
 @Entity
-@Table(name="TOYS")
+@Table(name="toys")
 public class Toy {
 
     @Id
