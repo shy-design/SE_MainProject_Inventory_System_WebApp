@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d92c320-b0bb-41de-9052-c751e4d62c55" name="Default Changelist" comment="my changes">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_albfernandez_juniversalchardet_2_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_librepdf_openpdf_1_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/PdfExporterGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/PdfExporterToy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/static/css/table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/static/image/toy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/static/image/toy2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/static/image/toy3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-03-16_8_44_p_m___Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-03-16_8_44_p_m___Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-03-23_5_42_p_m___Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-03-23_5_42_p_m___Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/toyDatabase.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/toyDatabase.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/toyDatabase.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/toyDatabase.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/ToyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/ToyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/templates/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/templates/table.html" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/templates/table.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,16 +60,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/static/image" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
@@ -73,14 +78,28 @@
       <recent name="com.example.toys_inventory.Service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\offcampus\Documents\GitHub\SE_MainProject_Inventory_System_WebApp\toys_inventory\toys_inventory\src\main\resources\static\image" />
+      <recent name="C:\Users\offcampus\Documents\GitHub\SE_MainProject_Inventory_System_WebApp\toys_inventory\toys_inventory\src\main\resources\templates" />
       <recent name="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/Service" />
       <recent name="C:\Users\offcampus\Desktop\SE_MainProject_Inventory_System_WebApp\toys_inventory\toys_inventory\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\offcampus\Documents\GitHub\SE_MainProject_Inventory_System_WebApp\toys_inventory\toys_inventory\src\main\resources\static" />
       <recent name="C:\temp\GitHub\csis3275\SE_MainProject_Inventory_System_WebApp\toys_inventory\toys_inventory\src\main\resources\db" />
     </key>
   </component>
   <component name="RunManager" selected="Application.ToysInventoryApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ToysInventoryApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.toys_inventory.ToysInventoryApplication" />
       <module name="toys_inventory" />
@@ -90,17 +109,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
