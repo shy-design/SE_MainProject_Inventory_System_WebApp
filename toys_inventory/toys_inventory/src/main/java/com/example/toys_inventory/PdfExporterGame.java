@@ -54,6 +54,23 @@ public class PdfExporterGame {
         table.addCell(cell);
     }
 
+    private void writeSecondTableHeader(PdfPTable table) {
+        PdfPCell cell = new PdfPCell();
+        cell.setBackgroundColor(Color.BLUE);
+        cell.setPadding(5);
+
+        com.lowagie.text.Font font = FontFactory.getFont(FontFactory.HELVETICA);
+        font.setColor(Color.WHITE);
+
+        cell.setPhrase(new Phrase("Total quantity sold", font));
+
+        table.addCell(cell);
+
+        cell.setPhrase(new Phrase("Total Sales", font));
+        table.addCell(cell);
+
+    }
+
     private void writeTableData(PdfPTable table) {
         for (Game newGame : gameList) {
             table.addCell(String.valueOf(newGame.getId()));
@@ -61,10 +78,20 @@ public class PdfExporterGame {
             table.addCell(newGame.getName());
             table.addCell(String.valueOf(newGame.getQtyStart()));
             table.addCell(String.valueOf(newGame.getQtySold()));
-            table.addCell(String.valueOf(newGame.getQtyStart() - newGame.getQtySold()));
+            table.addCell(String.valueOf(newGame.qtyOnHand()));
             table.addCell(String.valueOf(newGame.getUnitPrice()));
             table.addCell(String.valueOf(newGame.getUnitPrice()*newGame.getQtySold()));
         }
+    }
+    private void writeSecondTableData(PdfPTable table) {
+        int itemsSold = 0;
+        double totalSold = 0;
+        for(Game newGame: gameList) {
+            itemsSold += newGame.getQtySold();
+            totalSold += newGame.totalSales();
+        }
+        table.addCell(String.valueOf(itemsSold));
+        table.addCell(String.valueOf(totalSold));
     }
 
     public void export(HttpServletResponse response) throws DocumentException, IOException {
@@ -77,19 +104,30 @@ public class PdfExporterGame {
         font.setColor(Color.BLUE);
 
         Paragraph p = new Paragraph("List of Games", font);
+        Paragraph p2 = new Paragraph("Summary Information", font);
         p.setAlignment(Paragraph.ALIGN_CENTER);
+        p2.setAlignment(Paragraph.ALIGN_CENTER);
 
-        document.add(p);
 
         PdfPTable table = new PdfPTable(8);
         table.setWidthPercentage(100f);
         table.setWidths(new float[] {1.25f, 1.25f, 1.25f, 1.25f, 1.25f, 1.25f, 1.25f, 1.25f});
         table.setSpacingBefore(10);
 
+        PdfPTable table2 = new PdfPTable(2);
+        table2.setWidthPercentage(100f);
+        table2.setWidths(new float[] {1.25f,1.25f});
+        table2.setSpacingBefore(10);
+
         writeTableHeader(table);
         writeTableData(table);
+        writeSecondTableHeader(table2);
+        writeSecondTableData(table2);
 
+        document.add(p);
         document.add(table);
+        document.add(p2);
+        document.add(table2);
 
         document.close();
 

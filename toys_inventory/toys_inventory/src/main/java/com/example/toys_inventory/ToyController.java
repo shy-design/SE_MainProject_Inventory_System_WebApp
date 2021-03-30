@@ -140,14 +140,15 @@ public class ToyController {
     public String addItems(Model model,
                            @RequestParam("action") String action,
                            @RequestParam("category") String category,
-                           @ModelAttribute("toy") Toy toy){
+                           @ModelAttribute("toy") Toy toy,
+                           @ModelAttribute Game game){
 
         model.addAttribute("category", category);
 
         // processing Add Item button
         if (action.equals("add") && category.equals("game")){
             jdbcTemplate.update("INSERT INTO games(brand, name, qtyStart, qtySold, unitPrice) VALUES(?,?,?,?,?);",
-                    toy.getBrand(), toy.getName(), toy.getQtyStart(), toy.getQtySold(), toy.getUnitPrice());
+                    game.getBrand(), game.getName(), game.getQtyStart(), game.getQtySold(), game.getUnitPrice());
             loadData();
             model.addAttribute("toys", gameList);
             return "table";
@@ -167,7 +168,8 @@ public class ToyController {
                               @RequestParam("action") String action,
                               @RequestParam("category") String category,
                               @RequestParam("id") int id,
-                              @ModelAttribute Toy toy){
+                              @ModelAttribute Toy toy,
+                              @ModelAttribute Game game){
 
         boolean validID = false;
         model.addAttribute("category", category);
@@ -177,8 +179,8 @@ public class ToyController {
             String sqlUpdateItem = "UPDATE games\n" +
                     "SET brand = ?, name = ?, qtyStart = ?, qtySold = ?, unitPrice = ?\n" +
                     "WHERE id = ?;";
-            int result = jdbcTemplate.update(sqlUpdateItem, toy.getBrand(), toy.getName(), toy.getQtyStart(),
-                    toy.getQtySold(), toy.getUnitPrice(), id);
+            int result = jdbcTemplate.update(sqlUpdateItem, game.getBrand(), game.getName(), game.getQtyStart(),
+                    game.getQtySold(), game.getUnitPrice(), id);
             loadData();
             model.addAttribute("toys", gameList);
             return "table";
@@ -217,9 +219,9 @@ public class ToyController {
             if (category.equals("game")){
                 String sqlPickGame = "SELECT * FROM games WHERE id = ?";
                 try {
-                    Game game = jdbcTemplate.queryForObject(sqlPickGame, new BeanPropertyRowMapper<>(Game.class), id);
+                    Game game1 = jdbcTemplate.queryForObject(sqlPickGame, new BeanPropertyRowMapper<>(Game.class), id);
                     validID = true;
-                    model.addAttribute("toy", game);
+                    model.addAttribute("toy", game1);
                 } catch (Exception e){
 
                 }
