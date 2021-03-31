@@ -3,7 +3,7 @@ package com.example.toys_inventory.DataModel;
 import javax.persistence.*;
 
 @Entity
-@Table(name="TOYS")
+@Table(name="toys")
 public class Toy {
 
     @Id
@@ -78,8 +78,16 @@ public class Toy {
     }
 
     public int qtyOnHand() {
-        return qtyStart - qtySold;
+
+        int qtyOnHand = qtyStart - qtySold;
+        if (qtyOnHand < 0) {
+            return 0;
+        }
+        else {
+            return qtyOnHand;
+        }
     }
+
 
     public double totalSales () {
         return qtySold * unitPrice;

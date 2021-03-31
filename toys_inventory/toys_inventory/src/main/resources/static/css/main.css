@@ -1,0 +1,15 @@
+body {
+    background-image: url("../image/toy2.jpg");
+}
+
+button {
+    margin: 5px;
+}
+
+form {
+    margin: 240px auto;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    width: 55%;
+}

@@ -8,13 +8,13 @@
           rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
           crossorigin="anonymous">
     <title>Toys inventory system</title>
+    <link th:href="@{/css/table.css}" rel="stylesheet" />
 </head>
 <body>
 <h3> Toy Inventory Processing Table</h3>
-
 <hr>
-<div class="container">
-    <table class="table table-bordered table-striped">
+<div class="container" style="overflow-x:auto; height:300px;">
+    <table class="table table-bordered table-striped" id="toy">
         <thead>
         <tr>
             <th> Item ID </th>
@@ -41,6 +41,7 @@
         </tbody>
     </table>
 </div>
+<br/>
 
 <div class="container">
     <table class="table">
@@ -74,7 +75,9 @@
             </td>
             <td>
                 <h4>Export a report</h4>
+                <form method="get" action="/toy/generate">
                 <button class="btn btn-primary" type="submit" name="action"  value="generate_report">Generate Report</button>
+                </form>
             </td>
         </tr>
     </table>

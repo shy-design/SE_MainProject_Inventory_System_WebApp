@@ -3,7 +3,7 @@ package com.example.toys_inventory.DataModel;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "GAMES")
+@Table(name = "games")
 public class Game {
 
     @Id
@@ -29,14 +29,9 @@ public class Game {
     }
 
 
-    public int qtyOnHand() {
-        return qtyStart - qtySold;
-    }
-
     public double totalSales () {
         return qtySold * unitPrice;
     }
-
 
     public int getId() {
         return id;
@@ -70,12 +65,21 @@ public class Game {
         this.qtyStart = qtyStart;
     }
 
-    public int getQtySold() {
-        return qtySold;
-    }
+    public int getQtySold() { return qtySold; }
 
     public void setQtySold(int qtySold) {
         this.qtySold = qtySold;
+    }
+
+    public int qtyOnHand() {
+
+        int qtyOnHand = qtyStart - qtySold;
+        if (qtyOnHand < 0) {
+            return 0;
+        }
+        else {
+            return qtyOnHand;
+        }
     }
 
     public double getUnitPrice() {

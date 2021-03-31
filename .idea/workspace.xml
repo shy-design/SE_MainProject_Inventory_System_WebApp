@@ -5,23 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d92c320-b0bb-41de-9052-c751e4d62c55" name="Default Changelist" comment="my changes">
-      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/Service/PopulateDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-03-14_10_04_a_m__[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-03-14_10_04_a_m___Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-03-16_9_02_p_m__[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-03-16_9_02_p_m___Default_Changelist_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/static/css/table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/static/image/toy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/static/image/toy2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/static/image/toy3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-03-16_8_44_p_m___Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-03-16_8_44_p_m___Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-03-23_5_42_p_m___Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-03-23_5_42_p_m___Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/toyDatabase.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/toyDatabase.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/toyDatabase.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/toyDatabase.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/Toy.java" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/Toy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/DataModel/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/Service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/Service/GameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/Service/ToyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/Service/ToyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/ToyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/ToyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/db/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/db/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/db/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/db/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/templates/table.html" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/templates/table.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,10 +60,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../SE_MainProject_Inventory_System_WebApp-main" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/static/image" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
@@ -74,14 +78,28 @@
       <recent name="com.example.toys_inventory.Service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\offcampus\Documents\GitHub\SE_MainProject_Inventory_System_WebApp\toys_inventory\toys_inventory\src\main\resources\static\image" />
+      <recent name="C:\Users\offcampus\Documents\GitHub\SE_MainProject_Inventory_System_WebApp\toys_inventory\toys_inventory\src\main\resources\templates" />
       <recent name="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/java/com/example/toys_inventory/Service" />
       <recent name="C:\Users\offcampus\Desktop\SE_MainProject_Inventory_System_WebApp\toys_inventory\toys_inventory\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\offcampus\Documents\GitHub\SE_MainProject_Inventory_System_WebApp\toys_inventory\toys_inventory\src\main\resources\static" />
       <recent name="C:\temp\GitHub\csis3275\SE_MainProject_Inventory_System_WebApp\toys_inventory\toys_inventory\src\main\resources\db" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ToysInventoryApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ToysInventoryApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.toys_inventory.ToysInventoryApplication" />
       <module name="toys_inventory" />
@@ -91,6 +109,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ToysInventoryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="toys_inventory" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.toys_inventory.ToysInventoryApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -111,6 +136,7 @@
       <updated>1615425822040</updated>
       <workItem from="1616307274699" duration="635000" />
       <workItem from="1616309960303" duration="66000" />
+      <workItem from="1616704415724" duration="5766000" />
     </task>
     <task id="LOCAL-00001" summary="my changes">
       <created>1615952763559</created>
