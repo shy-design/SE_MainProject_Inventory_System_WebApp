@@ -8,8 +8,16 @@ button {
 
 form {
     margin: 240px auto;
-    padding: 10px;
-    background-color: white;
     text-align: center;
+    background: rgb(245,245,252);
+    background: linear-gradient(0deg, rgba(245,245,252,1) 0%, rgba(251,251,251,1) 58%, rgba(255,255,255,1) 100%);
     width: 55%;
+    padding: 10px;
+
+    /*Border config*/
+    border-radius: 15px;
+    border: 16px ridge black;
+    border-style: solid;
+    border-width: 3px;
+    box-shadow: -30px 30px 20px rgba(0,0,0,0.3);
 }

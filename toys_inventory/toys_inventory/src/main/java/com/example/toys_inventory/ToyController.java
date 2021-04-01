@@ -48,15 +48,29 @@ public class ToyController {
         toyList = jdbcTemplate.query(sqlToys, new BeanPropertyRowMapper<>(Toy.class));
         if(toyList.size() == 0) {
             String insertToys = "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)" +
-                    "VALUES('Barbie','doll',80,55,18);" +
+                    "   VALUES('Barbie','doll',80,55,18);" +
                     "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)" +
-                    "\tVALUES('Lego','Jurassic World',110,95,60);" +
-                    "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)\n" +
-                    "    VALUES('Lego','Star Wars',150,55,28);" +
-                    "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)\n" +
-                    "    VALUES('Hot Wheels','Monster Truck',80,55,18);" +
+                    "   VALUES('Lego','Jurassic World',110,95,60);" +
                     "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)" +
-                    "    VALUES('Barbie','Barbie Dreamhouse',80,25,88);";
+                    "   VALUES('Lego','Star Wars',150,55,28);" +
+                    "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)" +
+                    "   VALUES('Hot Wheels','Monster Truck',80,55,18);" +
+                    "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)" +
+                    "   VALUES('Barbie','Barbie Dreamhouse',80,25,88);" +
+                    "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)" +
+                    "   VALUES('Mega Blocks', 'Build & Race Rig', 20, 8, 26);" +
+                    "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)" +
+                    "   VALUES('Lego', 'Pirate Ship', 25, 5, 139);" +
+                    "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)" +
+                    "   VALUES('DC', 'Death Metal Batman', 20, 4, 24);" +
+                    "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)" +
+                    "   VALUES('Disney', 'Princess Rainbow Ariel', 32, 12, 22);" +
+                    "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)" +
+                    "   VALUES('Disney', 'Rapunzel Toddler', 14, 6, 19);" +
+                    "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)" +
+                    "   VALUES('Mattel', 'Mega Construx Halo', 18, 8, 59);" +
+                    "INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice)" +
+                    "   VALUES('McFarlane Toys', 'The Witcher - Geralt of Rivia Action Figure', 28, 16, 30);";
             jdbcTemplate.execute(insertToys);
         }
         toyList = jdbcTemplate.query(sqlToys, new BeanPropertyRowMapper<>(Toy.class));
@@ -69,11 +83,25 @@ public class ToyController {
         if(gameList.size() == 0){
 
             String insertGames = "INSERT INTO games(brand, name, qtyStart, qtySold, unitPrice)" +
-            "VALUES('Warhammer','Tempest of Souls',100,50,100);" +
+                "VALUES('Warhammer','Tempest of Souls',100,50,100);" +
             "INSERT INTO games(brand, name, qtyStart, qtySold, unitPrice)" +
-            "VALUES('Starling Games','A War of Whisperer',120,35,59);" +
+                "VALUES('Starling Games','A War of Whisperer',120,35,59);" +
             "INSERT INTO games(brand, name, qtyStart, qtySold, unitPrice)" +
-            "VALUES('Cephalofair Games','Gloomhaven Jaws of the Lion',120,35,62);";
+                "VALUES('Cephalofair Games','Gloomhaven Jaws of the Lion',120,35,62);" +
+            "INSERT INTO games(brand, name, qtyStart, qtySold, unitPrice)" +
+                "VALUES('Hasbro Gaming','Guess Who?',40,35,15);" +
+            "INSERT INTO games(brand, name, qtyStart, qtySold, unitPrice)" +
+                "VALUES('Hasbro Gaming','Monopoly Classic',30,22,19);" +
+            "INSERT INTO games(brand, name, qtyStart, qtySold, unitPrice)" +
+                "VALUES('Hasbro Gaming','Clue',45,30,12);" +
+            "INSERT INTO games(brand, name, qtyStart, qtySold, unitPrice)" +
+                "VALUES('Disney','Villainous - Evil Comes Prepared',28,17,21);" +
+            "INSERT INTO games(brand, name, qtyStart, qtySold, unitPrice)" +
+                "VALUES('Hasbro Gaming','Battleship Classic',12,4,12);" +
+            "INSERT INTO games(brand, name, qtyStart, qtySold, unitPrice)" +
+                "VALUES('Chess Armory','Wooden Chess Set Game',12,6,19);" +
+            "INSERT INTO games(brand, name, qtyStart, qtySold, unitPrice)" +
+                    "VALUES('Catan Studio','Catan Board Game',13,7,41);";
             jdbcTemplate.execute(insertGames);
         }
         gameList = jdbcTemplate.query(sqlGames, new BeanPropertyRowMapper<>(Game.class));
@@ -147,6 +175,9 @@ public class ToyController {
 
         // processing Add Item button
         if (action.equals("add") && category.equals("game")){
+            if(game.getBrand() == ""){
+
+            }
             jdbcTemplate.update("INSERT INTO games(brand, name, qtyStart, qtySold, unitPrice) VALUES(?,?,?,?,?);",
                     game.getBrand(), game.getName(), game.getQtyStart(), game.getQtySold(), game.getUnitPrice());
             loadData();

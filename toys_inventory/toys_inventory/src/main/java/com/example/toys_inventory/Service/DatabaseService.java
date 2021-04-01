@@ -10,11 +10,11 @@ import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 
 @Service
-public class PopulateDataService {
+public class DatabaseService {
 
     private final DataSource dataSource;
 
-    public PopulateDataService(DataSource dataSource) {
+    public DatabaseService(DataSource dataSource) {
         this.dataSource = dataSource;
     }
 

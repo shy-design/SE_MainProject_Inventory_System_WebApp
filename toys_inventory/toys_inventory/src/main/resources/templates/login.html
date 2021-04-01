@@ -10,19 +10,21 @@
     <title>Login: Toys inventory system</title>
     <link th:href="@{/css/login.css}" rel="stylesheet" />
 </head>
+
 <body>
-<h1> Welcome to the Toy inventory system!</h1>
-<h2> Login</h2>
-<div th:if="${param.error}" class="alert alert-danger">
-    Invalid username and password.
-</div>
-<form method="post">
+    <img src="../image/logo.png">
+
+    <h2> Login</h2>
+    <div th:if="${param.error}" class="alert alert-danger">
+        Invalid username and password.
+    </div>
+<form id="mainForm" method="post">
 
     <input type="email" name="email" placeholder="E-mail" required autofocus/>
     <br>
     <input type="password" name="password" placeholder="Password" required />
     <br>
-    <button class="btn btn-primary" type="submit" name="login">Login</button>
+    <button class="btn-primary" type="submit" name="login">Login</button>
 
 </form>
 </body>
