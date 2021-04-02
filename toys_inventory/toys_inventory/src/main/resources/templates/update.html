@@ -8,36 +8,94 @@
           rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
           crossorigin="anonymous">
     <title>Toys inventory system</title>
+    <script type="text/javascript">
+        function validateForm() {
+            var brandName = document.getElementById("brandName");
+            var productName = document.getElementById("productName");
+            var qtyStart = document.getElementById("qtyStart");
+            var qtySold = document.getElementById("qtySold");
+            var unitPrice = document.getElementById("unitPrice");
+
+            var errorBrand = document.getElementById("errorBrand");
+            var errorName = document.getElementById("errorName");
+            var errorStart = document.getElementById("errorStart");
+            var errorSold = document.getElementById("errorSold");
+            var errorPrice = document.getElementById("errorPrice");
+
+            errorBrand.textContent= "";
+            errorName.textContent= "";
+            errorStart.textContent= "";
+            errorSold.textContent= "";
+            errorPrice.textContent = "";
+
+            var checkError1, checkError2, checkError3, checkError4, checkError5;
+
+            if (brandName.value == "") {
+                errorBrand.textContent= "Brand Name cannot be Empty!";
+                qtyStart.focus();
+                checkError1 = false;
+            }
+            if (productName.value == "") {
+                errorName.textContent= "Name cannot be empty!";
+                qtyStart.focus();
+                checkError2 = false;
+            }
+            if (qtyStart.value == "" || parseInt(qtyStart.value) < 1 ) {
+                errorStart.textContent= "Quantity Start should be greater than 0";
+                qtyStart.focus();
+                checkError3 = false;
+            }
+
+            if (qtySold.value == "" || parseInt(qtySold.value) < 0 || parseInt(qtySold.value) > parseInt(qtyStart.value)) {
+                errorSold.textContent= "Quantity Sold should be greater or even 0 and less than Quantity Sold";
+                qtySold.focus();
+                checkError4 = false;
+            }
+
+            if (unitPrice.value == "" || parseInt(unitPrice.value) < 0.5 ) {
+                errorPrice.textContent = "Unit Price should be greater than 0";
+                unitPrice.focus();
+                checkError5 = false;
+            }
+
+            if(checkError1 == false || checkError2 == false || checkError3 == false || checkError4 == false || checkError5 == false){
+                return false;
+            }else{
+                return true;
+            }
+        }
+    </script>
+
 </head>
 <body>
 <div class="container" align="center">
-    <form method="post" th:object="${toy}">
+    <form method="post" th:object="${toy}" onsubmit="return validateForm();">
         <h2>Enter the information of the added item</h2>
         <table>
             <tr>
                 <td><p>Item ID (*)</p></td>
                 <td><p th:text="${toy.id}" th:field="*{id}"></p></td>
-                <td hidden><input type="text" th:field="*{id}" th:value="${toy.id}"/> <br /></td>
+                <td hidden><input type="text" th:field="*{id}" th:value="${toy.id}"/><br /></td>
             </tr>
             <tr>
                 <td><label>Brand (*)</label></td>
-                <td><input type="text" th:field="*{brand}" th:value="${toy.brand}" required/> <br /></td>
+                <td><input type="text" id="brandName" th:field="*{brand}" th:value="${toy.brand}" /><span style="color: Red; font-style: italic;" id="errorBrand" class="has-error" />  <br /></td>
             </tr>
             <tr>
                 <td><label>Name (*)</label></td>
-                <td> <input type="text" th:field="*{name}" th:value="${toy.name}" required/> <br /></td>
+                <td> <input type="text" id="productName" th:field="*{name}" th:value="${toy.name}" /><span  style="color: Red; font-style: italic;" id="errorName" class="has-error" /> <br /></td>
             </tr>
             <tr>
                 <td><label>Qty Start (*)</label></td>
-                <td><input type="number" th:field="*{qtyStart}" th:value="${toy.qtyStart}" required/><br /></td>
+                <td><input type="number" id="qtyStart" th:field="*{qtyStart}" th:value="${toy.qtyStart}" /><span style="color: Red; font-style: italic;" id="errorStart" class="has-error" /><br /></td>
             </tr>
             <tr>
                 <td><label>Qty sold (*)</label></td>
-                <td><input type="number" th:field="*{qtySold}" th:value="${toy.qtySold}" required/> <br /></td>
+                <td><input type="number" id="qtySold" th:field="*{qtySold}" th:value="${toy.qtySold}" /><span style="color: Red; font-style: italic;" id="errorSold" class="has-error" /> <br /></td>
             </tr>
             <tr>
                 <td><label>Unit Price (*)</label></td>
-                <td><input type="number" th:field="*{unitPrice}" th:value="${toy.unitPrice}" required/><br /></td>
+                <td><input type="number" id="unitPrice" step = ".01" th:field="*{unitPrice}" th:value="${toy.unitPrice}" /><span style="color: Red; font-style: italic;" id="errorPrice" class="has-error" /><br /></td>
             </tr>
             <tr hidden>
                 <td><label>Category</label></td>
