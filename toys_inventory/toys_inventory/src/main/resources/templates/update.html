@@ -46,19 +46,19 @@
                 checkError3 = false;
             }
 
-            if (qtySold.value == "" || parseInt(qtySold.value) < 1 || parseInt(qtySold.value) > parseInt(qtyStart.value)) {
-                errorSold.textContent= "Quantity Sold should be greater than 0 and less than Quantity Sold";
+            if (qtySold.value == "" || parseInt(qtySold.value) < 0 || parseInt(qtySold.value) > parseInt(qtyStart.value)) {
+                errorSold.textContent= "Quantity Sold should be greater or even 0 and less than Quantity Sold";
                 qtySold.focus();
                 checkError4 = false;
             }
 
-            if (unitPrice.value == "" || parseInt(unitPrice.value) < 1 ) {
+            if (unitPrice.value == "" || parseInt(unitPrice.value) < 0.5 ) {
                 errorPrice.textContent = "Unit Price should be greater than 0";
                 unitPrice.focus();
                 checkError5 = false;
             }
 
-            if(checkError1 || checkError2 || checkError3 == false || checkError4 == false || checkError5 == false){
+            if(checkError1 == false || checkError2 == false || checkError3 == false || checkError4 == false || checkError5 == false){
                 return false;
             }else{
                 return true;
@@ -95,7 +95,7 @@
             </tr>
             <tr>
                 <td><label>Unit Price (*)</label></td>
-                <td><input type="number" id="unitPrice" th:field="*{unitPrice}" th:value="${toy.unitPrice}" /><span style="color: Red; font-style: italic;" id="errorPrice" class="has-error" /><br /></td>
+                <td><input type="number" id="unitPrice" step = ".01" th:field="*{unitPrice}" th:value="${toy.unitPrice}" /><span style="color: Red; font-style: italic;" id="errorPrice" class="has-error" /><br /></td>
             </tr>
             <tr hidden>
                 <td><label>Category</label></td>
