@@ -25,4 +25,9 @@ class ToyTest {
     void qtyOnHand2() {
         assertNotEquals(25,toy.qtyOnHand());
     }
+
+    @Test
+    void totalSales1() {
+        assertEquals(2550,toy.totalSales());
+    }
 }
