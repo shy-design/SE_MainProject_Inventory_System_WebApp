@@ -26,6 +26,9 @@ import java.util.List;
 @RequestMapping({"/toy"})
 public class ToyController {
 
+    public ToyController(JdbcTemplate jdbcTemplate){ this.jdbcTemplate = jdbcTemplate; }
+
+
     @Autowired
     private JdbcTemplate jdbcTemplate;
     @Autowired
@@ -33,15 +36,15 @@ public class ToyController {
     @Autowired
     private GameService gameService;
 
-    private List<Toy> toyList;
-    private List<Game> gameList;
-    private List<User> userList;
+    public List<Toy> toyList;
+    public List<Game> gameList;
+    public List<User> userList;
 
     private String toyOrGame = "";
 
     // Method to populate the tables only once.
     @PostConstruct
-    private void loadTables(){
+    public void loadTables(){
 
         String sqlToys= "SELECT * FROM toys";
         toyList = new ArrayList<>();
@@ -130,22 +133,30 @@ public class ToyController {
     }
 
 
-    @PostConstruct
-    private void loadData() {
-
-        String sqlToys= "SELECT * FROM toys";
-        toyList = new ArrayList<>();
-        toyList = jdbcTemplate.query(sqlToys, new BeanPropertyRowMapper<>(Toy.class));
-
-        String sqlGame = "SELECT * FROM games";
-        gameList = jdbcTemplate.query(sqlGame, new BeanPropertyRowMapper<>(Game.class));
-    }
-
     @GetMapping
    public String showMainPage() {
         return "main";
 
     }
+
+    @PostConstruct
+    public List<Toy> loadToys() {
+
+        String sqlToys= "SELECT * FROM toys";
+        toyList = new ArrayList<>();
+        toyList = jdbcTemplate.query(sqlToys, new BeanPropertyRowMapper<>(Toy.class));
+
+        return toyList;
+    }
+
+    @PostConstruct
+    public List<Game> loadGames(){
+        String sqlGame = "SELECT * FROM games";
+        gameList = jdbcTemplate.query(sqlGame, new BeanPropertyRowMapper<>(Game.class));
+
+        return gameList;
+    }
+
 
     @PostMapping
     public String showTables(Model model, @RequestParam("action") String action) {
@@ -180,14 +191,18 @@ public class ToyController {
             }
             jdbcTemplate.update("INSERT INTO games(brand, name, qtyStart, qtySold, unitPrice) VALUES(?,?,?,?,?);",
                     game.getBrand(), game.getName(), game.getQtyStart(), game.getQtySold(), game.getUnitPrice());
-            loadData();
+            //loadData();
+            loadGames();
+            loadToys();
             model.addAttribute("toys", gameList);
             return "table";
 
         } else if (action.equals("add") && category.equals("toy")){
             jdbcTemplate.update("INSERT INTO toys(brand, name, qtyStart, qtySold, unitPrice) VALUES(?,?,?,?,?);",
                     toy.getBrand(), toy.getName(), toy.getQtyStart(), toy.getQtySold(), toy.getUnitPrice());
-            loadData();
+            //loadData();
+            loadToys();
+            loadGames();
             model.addAttribute("toys", toyList);
             return "table";
 
@@ -212,7 +227,9 @@ public class ToyController {
                     "WHERE id = ?;";
             int result = jdbcTemplate.update(sqlUpdateItem, game.getBrand(), game.getName(), game.getQtyStart(),
                     game.getQtySold(), game.getUnitPrice(), id);
-            loadData();
+            //loadData();
+            loadToys();
+            loadGames();
             model.addAttribute("toys", gameList);
             return "table";
         } else if (action.equals("update") && category.equals("toy")){
@@ -221,7 +238,9 @@ public class ToyController {
                     "WHERE id = ?;";
             int result = jdbcTemplate.update(sqlUpdateItem, toy.getBrand(), toy.getName(), toy.getQtyStart(),
                     toy.getQtySold(), toy.getUnitPrice(), id);
-            loadData();
+            //loadData();
+            loadToys();
+            loadGames();
             model.addAttribute("toys", toyList);
             return "table";
         }
@@ -231,12 +250,16 @@ public class ToyController {
             if (category.equals("game")){
                 String sqlDeleteItem = "DELETE FROM games WHERE id=?;";
                 result = jdbcTemplate.update(sqlDeleteItem, id);
-                loadData();
+                //loadData();
+                loadToys();
+                loadGames();
                 model.addAttribute("toys", gameList);
             } else if (category.equals("toy")){
                 String sqlDeleteItem = "DELETE FROM toys WHERE id=?;";
                 result = jdbcTemplate.update(sqlDeleteItem, id);
-                loadData();
+                //loadData();
+                loadToys();
+                loadGames();
                 model.addAttribute("toys", toyList);
             }
             if (result == 0){
@@ -312,6 +335,16 @@ public class ToyController {
             PdfExporterGame exporter = new PdfExporterGame(gameList);
             exporter.export(response);
         }
-
     }
+
+   /* @PostConstruct
+    public void loadData() {
+
+        String sqlToys= "SELECT * FROM toys";
+        toyList = new ArrayList<>();
+        toyList = jdbcTemplate.query(sqlToys, new BeanPropertyRowMapper<>(Toy.class));
+
+        String sqlGame = "SELECT * FROM games";
+        gameList = jdbcTemplate.query(sqlGame, new BeanPropertyRowMapper<>(Game.class));
+    }*/
 }
