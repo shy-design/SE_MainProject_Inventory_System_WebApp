@@ -47,7 +47,7 @@
             }
 
             if (qtySold.value == "" || parseInt(qtySold.value) < 0 || parseInt(qtySold.value) > parseInt(qtyStart.value)) {
-                errorSold.textContent= "Quantity Sold should be greater or even 0 and less than Quantity Sold";
+                errorSold.textContent= "Quantity Sold should be greater or even 0 and less than Quantity Start";
                 qtySold.focus();
                 checkError4 = false;
             }
