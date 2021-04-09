@@ -49,7 +49,7 @@ public class ToysAndGamesInventoryTest {
 
         //Verifying First Row of the Toys Table
         String[] toyRowValues= {
-                "1", "Barbie", "doll", "80", "55", "25","18.0","990.0"
+                "1", "Barbie Doll", "Doll New", "10", "9", "1","180.0","1620.0"
         };
         for(int i = 1; i<=8;i++){
             Thread.sleep(1000);

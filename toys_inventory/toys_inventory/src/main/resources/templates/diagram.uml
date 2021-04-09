@@ -12,59 +12,8 @@
     <node x="752.5136363636364" y="966.0">com.example.toys_inventory.UserController</node>
   </nodes>
   <notes />
-  <edges>
-    <edge source="com.example.toys_inventory.ToyController" target="com.example.toys_inventory.DataModel.Game">
-      <point x="99.75" y="-170.5" />
-      <point x="575.5477272727272" y="838.0" />
-      <point x="693.5136363636364" y="838.0" />
-      <point x="78.37500000000001" y="247.5" />
-    </edge>
-    <edge source="com.example.toys_inventory.PdfExporterToy" target="com.example.toys_inventory.DataModel.Toy">
-      <point x="-77.0" y="-82.5" />
-      <point x="77.0" y="525.0" />
-      <point x="151.15909090909093" y="525.0" />
-      <point x="-78.375" y="247.5" />
-    </edge>
-    <edge source="com.example.toys_inventory.ToyController" target="com.example.toys_inventory.DataModel.User">
-      <point x="139.64999999999998" y="-170.5" />
-      <point x="615.4477272727272" y="848.0" />
-      <point x="737.175" y="848.0" />
-      <point x="-77.25" y="126.5" />
-    </edge>
-    <edge source="com.example.toys_inventory.ToyController" target="com.example.toys_inventory.PdfExporterGame">
-      <point x="-19.949999999999932" y="-170.5" />
-      <point x="455.8477272727273" y="818.0" />
-      <point x="417.0" y="818.0" />
-      <point x="-77.0" y="82.5" />
-    </edge>
-    <edge source="com.example.toys_inventory.ToyController" target="com.example.toys_inventory.DataModel.Toy">
-      <point x="-59.84999999999991" y="-170.5" />
-      <point x="415.9477272727273" y="828.0" />
-      <point x="329.5" y="828.0" />
-      <point x="329.5" y="515.0" />
-      <point x="307.90909090909093" y="515.0" />
-      <point x="78.375" y="247.5" />
-    </edge>
-    <edge source="com.example.toys_inventory.PdfExporterGame" target="com.example.toys_inventory.DataModel.Game">
-      <point x="-77.0" y="-82.5" />
-      <point x="417.0" y="525.0" />
-      <point x="536.375" y="525.0" />
-      <point x="-78.375" y="247.5" />
-    </edge>
-    <edge source="com.example.toys_inventory.UserController" target="com.example.toys_inventory.DataModel.User">
-      <point x="-80.25" y="-82.5" />
-      <point x="832.7636363636364" y="858.0" />
-      <point x="840.175" y="858.0" />
-      <point x="25.75" y="126.5" />
-    </edge>
-    <edge source="com.example.toys_inventory.ToyController" target="com.example.toys_inventory.PdfExporterToy">
-      <point x="-179.54999999999984" y="-170.5" />
-      <point x="296.2477272727274" y="858.0" />
-      <point x="77.0" y="858.0" />
-      <point x="-77.0" y="82.5" />
-    </edge>
-  </edges>
-  <settings layout="Hierarchic Group" zoom="0.6263115415657788" x="537.0" y="609.5" />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="0.6613657214739709" x="997.63337628866" y="610.0" />
   <SelectedNodes />
   <Categories>
     <Category>Fields</Category>

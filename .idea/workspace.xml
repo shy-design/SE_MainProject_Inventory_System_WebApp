@@ -5,52 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d92c320-b0bb-41de-9052-c751e4d62c55" name="Default Changelist" comment="my changes">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_25_0_jre.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_14_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_14_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_bonigarcia_webdrivermanager_3_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_11_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_rauschig_jarchivelib_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_141_59.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/templates/UMLDiagram.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/templates/diagram.uml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/tests/com/example/toys_inventory/SeleniumTests/AddingItemTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/tests/com/example/toys_inventory/SeleniumTests/DeleteItemTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/tests/com/example/toys_inventory/SeleniumTests/LoginTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/tests/com/example/toys_inventory/SeleniumTests/ToysAndGamesInventoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/tests/com/example/toys_inventory/SeleniumTests/UpdatingItemTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SE_MainProject_Inventory_System_WebApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SE_MainProject_Inventory_System_WebApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_1_7_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_4_3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/toyDatabase.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/toyDatabase.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/templates/UMLDiagram.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/templates/diagram.uml" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/src/main/resources/templates/diagram.uml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/tests/com/example/toys_inventory/SeleniumTests/ToysAndGamesInventoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/tests/com/example/toys_inventory/SeleniumTests/ToysAndGamesInventoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toys_inventory/toys_inventory/tests/com/example/toys_inventory/SeleniumTests/UpdatingItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/toys_inventory/toys_inventory/tests/com/example/toys_inventory/SeleniumTests/UpdatingItemTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +50,10 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultPlantUmlFileTemplate" value="UML Activity" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -124,7 +88,7 @@
       <recent name="C:\temp\GitHub\csis3275\SE_MainProject_Inventory_System_WebApp\toys_inventory\toys_inventory\src\main\resources\db" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AddingItemTest">
+  <component name="RunManager" selected="Application.DeleteItemTest">
     <configuration name="AddingItemTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AddingItemTest" />
       <module name="toys_inventory" />
@@ -160,6 +124,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ToysInventoryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="toys_inventory" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.toys_inventory.ToysInventoryApplication" />
@@ -169,9 +144,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AddingItemTest" />
         <item itemvalue="Application.DeleteItemTest" />
         <item itemvalue="Application.UpdatingItemTest" />
+        <item itemvalue="Application.AddingItemTest" />
         <item itemvalue="Application.ToysAndGamesInventoryTest" />
         <item itemvalue="Application.LoginTest" />
       </list>
@@ -195,6 +170,8 @@
       <workItem from="1617864783731" duration="648000" />
       <workItem from="1617865502246" duration="10849000" />
       <workItem from="1617897766554" duration="8000" />
+      <workItem from="1617898340482" duration="870000" />
+      <workItem from="1617930123002" duration="615000" />
     </task>
     <task id="LOCAL-00001" summary="my changes">
       <created>1615952763559</created>

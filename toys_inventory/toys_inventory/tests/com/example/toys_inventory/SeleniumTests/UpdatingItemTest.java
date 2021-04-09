@@ -85,7 +85,7 @@ public class UpdatingItemTest {
         String[] toyRowValues= {
                 "1", "Barbie Barbie", "Home Box", "10", "7", "3","90000.0",
         };
-        for(int i = 1; i<=8;i++){
+        for(int i = 1; i<8;i++){
             Thread.sleep(1000);
             WebElement rowElement = driver.findElement(By.xpath("//body[1]/div[1]/table[1]/tbody[1]/tr[1]/td[" + i +"]"));
             Assert.assertEquals(toyRowValues[i-1], rowElement.getText());
