@@ -20,22 +20,24 @@ import java.util.List;
 @RequestMapping({"/", "/login"})
 public class UserController {
 
+    public UserController(JdbcTemplate jdbcTemplate){ this.jdbcTemplate = jdbcTemplate; }
+
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
     @Autowired
     private UserService userService;
 
-    private List<User> userList;
+    public List<User> userList;
 
 
     @PostConstruct
-    private void loadData() {
+    public List<User> loadData() {
 
         String sqlUser= "SELECT * FROM users";
         userList = new ArrayList<>();
         userList = jdbcTemplate.query(sqlUser, new BeanPropertyRowMapper<>(User.class));
-
+        return userList;
     }
 
     @GetMapping
