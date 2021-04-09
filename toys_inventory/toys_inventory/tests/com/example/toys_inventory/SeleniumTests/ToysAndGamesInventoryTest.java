@@ -1,3 +1,5 @@
+package com.example.toys_inventory.SeleniumTests;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -49,7 +51,7 @@ public class ToysAndGamesInventoryTest {
 
         //Verifying First Row of the Toys Table
         String[] toyRowValues= {
-                "1", "Barbie Doll", "Doll New", "10", "9", "1","180.0","1620.0"
+                "1", "Barbie", "doll", "80", "55", "25","18.0","990.0"
         };
         for(int i = 1; i<=8;i++){
             Thread.sleep(1000);
@@ -72,7 +74,7 @@ public class ToysAndGamesInventoryTest {
 
         //Verifying First Row of the Toys Table
         String[] gameRowValues= {
-                "1", "Warhammer", "Tempest of Souls", "100", "50", "50","100.0","5000.0"
+                "1", "Warhammer 22", "Tempest of Souls", "100", "85", "15","100.0","8500.0"
         };
         for(int i = 1; i<=8;i++){
             Thread.sleep(1000);
